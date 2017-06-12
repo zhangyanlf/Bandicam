@@ -342,7 +342,7 @@ extern const NSString * CSToastPositionBottom;
 /**
  Enables or disables tap to dismiss on toast views. Default is `YES`.
  
- @param allowTapToDismiss
+ @param tapToDismissEnabled
  */
 + (void)setTapToDismissEnabled:(BOOL)tapToDismissEnabled;
 
