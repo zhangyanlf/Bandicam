@@ -473,6 +473,7 @@
 
 //选择本地视频
 - (void) clickLocalVideo {
+    [self.view makeToast:@"本地视频功能未开发" duration:0.8 position:CSToastPositionCenter];
     [self.delegate changeLocalVideo];
 }
 
