@@ -9,6 +9,7 @@
 #import "makeVideoViewController.h"
 #import "RecordMovieViewController.h"
 #import "AddMisicViewController.h"
+#import "ZylUploadViewController.h"
 
 @interface makeVideoViewController ()<RecordMovieViewControllerDelegate,AddMisicViewControllerDelegate>
 
@@ -46,6 +47,17 @@
    
     
 }
+
+
+- (void)addMusicFinsh:(NSString *)videoPath {
+    NSLog(@"music video: %@",videoPath);
+    ZylUploadViewController *vc = [[ZylUploadViewController alloc]init];
+    vc.goodsDict = [self.goodsDict copy];
+    vc.thumbImagePath = self.thumbImagePath;
+    vc.videoPath = [videoPath copy];
+    [self setViewControllers:@[vc] animated:YES];
+}
+
 - (void)changeLocalVideo {
     NSLog(@"change to local video");
 }

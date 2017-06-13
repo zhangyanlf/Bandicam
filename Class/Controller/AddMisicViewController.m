@@ -144,8 +144,8 @@
 
 - (void)markButtonClicked:(UIButton *)button {
     //最终确定
-    [self.view makeToast:@"下一步暂未实现" duration:0.8 position:CSToastPositionCenter];
-    /*
+    //[self.view makeToast:@"下一步暂未实现" duration:0.8 position:CSToastPositionCenter];
+    
     if (self.selectedMusic == 0) {
         [self deleteMovieFile];
         [self.delegate addMusicFinsh:self.videoPath];
@@ -155,7 +155,7 @@
         urlStr = [urlStr stringByAppendingPathComponent:@"newMovie.mov"];
         [self.delegate addMusicFinsh:urlStr];
     }
-     */
+    
 }
 - (void)setupCollectionView {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
